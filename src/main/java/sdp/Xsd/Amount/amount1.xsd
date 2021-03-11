@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/payment/amount_charging/v2_1/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/payment/amount_charging/v2_1/local"
+           elementFormDefault="qualified">
+
+
+    <xs:element name="chargeAmount">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="endUserIdentifier" type="xs:string"/>
+                <xs:element form="unqualified" name="productId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="refundAmount">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="endUserIdentifier" type="xs:string"/>
+                <xs:element form="unqualified" name="description" type="xs:string"/>
+                <xs:element form="unqualified" name="currency" type="xs:string"/>
+                <xs:element form="unqualified" name="amount" type="xs:string"/>
+                <xs:element form="unqualified" name="code" type="xs:string"/>
+                <xs:element form="unqualified" name="referenceCode" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

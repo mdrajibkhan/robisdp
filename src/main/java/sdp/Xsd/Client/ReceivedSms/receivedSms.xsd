@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/sms/receive/v2_2/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/sms/receive/v2_2/local"
+           elementFormDefault="qualified">
+
+    <xs:element name="getReceivedSms">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="registrationIdentifier" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="result">
+        <xs:sequence>
+            <xs:element name="message" type="xs:string" form="unqualified"/>
+            <xs:element name="senderAddress" type="xs:string" form="unqualified"/>
+            <xs:element name="smsServiceActivationNumber" type="xs:string" form="unqualified"/>
+            <xs:element name="dateTime" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getReceivedSmsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="tns:result"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

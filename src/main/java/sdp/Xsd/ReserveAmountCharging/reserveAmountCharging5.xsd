@@ -1,0 +1,34 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/payment/reserve_amount_charging/v2_1/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/payment/reserve_amount_charging/v2_1/local"
+           elementFormDefault="qualified">
+
+    <xs:element name="reserveAmountReq">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="endUserIdentifier" type="xs:string"/>
+                <xs:element form="unqualified" name="productId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="chargeReservationReq">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="endUserIdentifier" type="xs:string"/>
+                <xs:element form="unqualified" name="productId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="releaseReservationReq">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="endUserIdentifier" type="xs:string"/>
+                <xs:element form="unqualified" name="productId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

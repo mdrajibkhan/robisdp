@@ -1,0 +1,80 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/subscribe/manage/v1_0/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/subscribe/manage/v1_0/local"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="ID" type="xs:string" form="unqualified"/>
+            <xs:element name="type" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--<xs:complexType name="key_value">-->
+        <!--<xs:sequence>-->
+            <!--<xs:element name="key" type="xs:string" form="unqualified"/>-->
+            <!--<xs:element name="value" type="xs:string" form="unqualified"/>-->
+        <!--</xs:sequence>-->
+    <!--</xs:complexType>-->
+
+    <!--<xs:complexType name="parameter">-->
+        <!--<xs:sequence>-->
+            <!--<xs:element name="namedParameters" type="tns:key_value" form="unqualified"/>-->
+        <!--</xs:sequence>-->
+    <!--</xs:complexType>-->
+
+    <xs:complexType name="info">
+        <xs:sequence>
+            <xs:element name="productID" type="xs:string" form="unqualified"/>
+            <xs:element name="operCode" type="xs:string" form="unqualified"/>
+            <xs:element name="isAutoExtend" type="xs:string" form="unqualified"/>
+            <xs:element name="channelID" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="subscribeProductReq">
+        <xs:sequence>
+            <xs:element name="userID" type="tns:user" form="unqualified"/>
+            <xs:element name="subInfo" type="tns:info" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="subscribeProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="subscribeProductReq" type="tns:subscribeProductReq"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="subscribeProductRsp">
+        <xs:sequence>
+            <xs:element name="result" type="xs:string" form="unqualified"/>
+            <xs:element name="resultDescription" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="subscribeProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="subscribeProductRsp" type="tns:subscribeProductRsp"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="unSubscribeProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="unSubscribeProductReq" type="tns:subscribeProductReq"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="unSubscribeProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="unSubscribeProductRsp" type="tns:subscribeProductRsp"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

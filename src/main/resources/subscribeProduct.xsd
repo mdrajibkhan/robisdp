@@ -1,0 +1,35 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/subscribe/manage/v1_0/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/subscribe/manage/v1_0/local"
+           elementFormDefault="qualified">
+    <xs:element name="subscribeProductReq">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="ID" type="xs:string"/>
+                <xs:element form="unqualified" name="type" type="xs:string"/>
+                <xs:element form="unqualified" name="productID" type="xs:string"/>
+                <xs:element form="unqualified" name="operCode" type="xs:string"/>
+                <xs:element form="unqualified" name="isAutoExtend" type="xs:string"/>
+                <xs:element form="unqualified" name="channelID" type="xs:string"/>
+                <xs:element form="unqualified" name="key" type="xs:string"/>
+                <xs:element form="unqualified" name="value" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<xs:element name="unSubscribeProductReq">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="ID" type="xs:string"/>
+                <xs:element form="unqualified" name="type" type="xs:string"/>
+                <xs:element form="unqualified" name="productID" type="xs:string"/>
+                <xs:element form="unqualified" name="operCode" type="xs:string"/>
+                <xs:element form="unqualified" name="isAutoExtend" type="xs:string"/>
+                <xs:element form="unqualified" name="channelID" type="xs:string"/>
+                <xs:element form="unqualified" name="key" type="xs:string"/>
+                <xs:element form="unqualified" name="value" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

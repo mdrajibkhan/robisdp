@@ -1,0 +1,166 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.sdp.com/schema/subscription/v1_0/local"
+           targetNamespace="http://www.sdp.com/schema/subscription/v1_0/local"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="ID" type="xs:string" form="unqualified"/>
+            <xs:element name="type" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="lang">
+        <xs:sequence>
+            <xs:element name="language" type="xs:string" form="unqualified"/>
+            <xs:element name="country" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="key_value">
+        <xs:sequence>
+            <xs:element name="key" type="xs:string" form="unqualified"/>
+            <xs:element name="value" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="extense">
+        <xs:sequence>
+            <xs:element name="item" type="tns:key_value" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:element name="getSubScriptionListReq">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="userID" type="tns:user"/>
+                <xs:element name="actionType" type="xs:string"/>
+                <xs:element name="langInfo" type="tns:lang"/>
+                <xs:element name="recordIndex" type="xs:string"/>
+                <xs:element name="batchSize" type="xs:string"/>
+                <xs:element name="extensionInfos" type="tns:extense"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="langInfo">
+        <xs:sequence>
+            <xs:element name="language" type="xs:string" form="unqualified"/>
+            <xs:element name="country" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="productName">
+        <xs:sequence>
+            <xs:element name="langInfo" type="tns:langInfo" form="unqualified"/>
+            <xs:element name="name" type="xs:string" form="unqualified"/>
+            <xs:element name="value" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="productNames">
+        <xs:sequence>
+            <xs:element name="productName" type="tns:productName"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="productDesc">
+        <xs:sequence>
+            <xs:element name="langInfo" type="tns:langInfo" form="unqualified"/>
+            <xs:element name="name" type="xs:string" form="unqualified"/>
+            <xs:element name="value" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="productDescs">
+        <xs:sequence>
+            <xs:element name="productDesc" type="tns:productDesc"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="parentName">
+        <xs:sequence>
+            <xs:element name="langInfo" type="tns:langInfo" form="unqualified"/>
+            <xs:element name="name" type="xs:string" form="unqualified"/>
+            <xs:element name="value" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="parentNames">
+        <xs:sequence>
+            <xs:element name="parentName" type="tns:parentName"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="spName">
+        <xs:sequence>
+            <xs:element name="langInfo" type="tns:langInfo" form="unqualified"/>
+            <xs:element name="name" type="xs:string" form="unqualified"/>
+            <xs:element name="value" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="spNames">
+        <xs:sequence>
+            <xs:element name="spName" type="tns:spName"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="amountInfo">
+        <xs:sequence>
+            <xs:element name="objectID" type="xs:string" form="unqualified"/>
+            <xs:element name="objectType" type="xs:string" form="unqualified"/>
+            <xs:element name="totalAmount" type="xs:string" form="unqualified"/>
+            <xs:element name="unit" type="xs:string" form="unqualified"/>
+            <xs:element name="usableAmount" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="amountInfos">
+        <xs:sequence>
+            <xs:element name="amountInfo" type="tns:amountInfo"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="subScriptionInfo">
+        <xs:sequence>
+            <xs:element name="orderKey" type="xs:string"/>
+            <xs:element name="userID" type="xs:string"/>
+            <xs:element name="productID" type="xs:string"/>
+            <xs:element name="productNames" type="tns:productNames"/>
+            <xs:element name="productDescs" type="tns:productDescs"/>
+            <xs:element name="parentID" type="xs:string"/>
+            <xs:element name="parentType" type="xs:string"/>
+            <xs:element name="parentNames" type="tns:parentNames"/>
+            <xs:element name="spID" type="xs:string"/>
+            <xs:element name="spNames" type="tns:spNames"/>
+            <xs:element name="subTime" type="xs:string"/>
+            <xs:element name="nextChargeTime" type="xs:string"/>
+            <xs:element name="isAutoExtend" type="xs:string"/>
+            <xs:element name="subScriptionState" type="xs:string"/>
+            <xs:element name="payType" type="xs:string"/>
+            <xs:element name="srcProductID" type="xs:string"/>
+            <xs:element name="channelID" type="xs:string"/>
+            <xs:element name="subApplyTime" type="xs:string"/>
+            <xs:element name="subExpireTime" type="xs:string"/>
+            <xs:element name="amountInfos" type="tns:amountInfos"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="subScriptionInfos">
+        <xs:sequence>
+            <xs:element name="subScriptionInfo" type="tns:subScriptionInfo"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getSubScriptionListRsp">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="recordSum" type="xs:string"/>
+                <xs:element name="subScriptionInfos" type="tns:subScriptionInfos"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

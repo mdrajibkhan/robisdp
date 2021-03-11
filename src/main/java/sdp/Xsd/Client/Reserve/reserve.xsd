@@ -1,0 +1,65 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/payment/reserve_amount_charging/v2_1/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/payment/reserve_amount_charging/v2_1/local"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="charge">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string" form="unqualified"/>
+            <xs:element name="currency" type="xs:string" form="unqualified"/>
+            <xs:element name="amount" type="xs:string" form="unqualified"/>
+            <xs:element name="code" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="reserveAmount">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="endUserIdentifier" type="xs:string"/>
+                <xs:element name="charge" type="tns:charge"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="reserveAmountResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="chargeReservation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reservationIdentifier" type="xs:string"/>
+                <xs:element name="charge" type="tns:charge"/>
+                <xs:element name="referenceCode" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="chargeReservationResponse">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="releaseReservation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reservationIdentifier" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="releaseReservationResponse">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

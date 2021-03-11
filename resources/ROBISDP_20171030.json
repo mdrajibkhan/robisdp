@@ -1,0 +1,126 @@
+{
+	"info": {
+		"name": "ROBISDP",
+		"_postman_id": "99e627e5-50e5-5ae1-f978-5b270f4989ea",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <SOAP-ENV:Header/>\n    <SOAP-ENV:Body>\n        <ns2:updateEmployeeRequest xmlns:ns2=\"robi_sdp\">\n        \t<ns2:id>1</ns2:id>\n        \t<ns2:name>Saikat</ns2:name>\n        \t<ns2:email>saikat@gmail.com</ns2:email>\n        \t<ns2:height>5.09</ns2:height>\n        </ns2:updateEmployeeRequest>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sdp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sdp"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <SOAP-ENV:Header/>\n    <SOAP-ENV:Body>\n        <ns2:addEmployeeRequest xmlns:ns2=\"robi_sdp\">\n        \t<ns2:name>Saikat</ns2:name>\n        \t<ns2:email>saikat@gmail.com</ns2:email>\n        \t<ns2:height>5.09</ns2:height>\n        </ns2:addEmployeeRequest>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sdp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sdp"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <SOAP-ENV:Header/>\n    <SOAP-ENV:Body>\n        <ns2:getAllEmployeeRequest xmlns:ns2=\"robi_sdp\">\n        </ns2:getAllEmployeeRequest>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sdp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sdp"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <SOAP-ENV:Header/>\n    <SOAP-ENV:Body>\n        <ns2:getEmployeeRequest xmlns:ns2=\"robi_sdp\">\n        \t<ns2:id>2</ns2:id>\n        </ns2:getEmployeeRequest>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/robisdp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"robisdp"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

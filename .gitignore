@@ -1,0 +1,4 @@
+#Ignoring Target and .idea
+logs/*
+target/*
+.idea/*

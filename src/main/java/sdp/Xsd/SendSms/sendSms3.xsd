@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/sms/send/v2_2/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/sms/send/v2_2/local"
+           elementFormDefault="qualified">
+
+    <xs:element name="sendSmsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="addresses" type="xs:string"/>
+                <xs:element form="unqualified" name="serviceId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sendSmsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element form="unqualified" name="result" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

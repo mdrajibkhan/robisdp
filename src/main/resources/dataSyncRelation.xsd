@@ -1,0 +1,53 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.csapi.org/schema/parlayx/data/sync/v1_0/local"
+           targetNamespace="http://www.csapi.org/schema/parlayx/data/sync/v1_0/local"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="ID" type="xs:string" form="unqualified"/>
+            <xs:element name="type" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="keyvalue">
+        <xs:sequence>
+            <xs:element name="key" type="xs:string" form="unqualified"/>
+            <xs:element name="value" type="xs:string" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="extenseInfo">
+        <xs:sequence>
+            <xs:element name="item" type="tns:keyvalue" maxOccurs="unbounded" form="unqualified"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="syncOrderRelation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="userID" type="tns:user"/>
+                <xs:element name="spID" type="xs:string"/>
+                <xs:element name="productID" type="xs:string"/>
+                <xs:element name="serviceID" type="xs:string"/>
+                <xs:element name="serviceList" type="xs:string"/>
+                <xs:element name="updateType" type="xs:string"/>
+                <xs:element name="updateTime" type="xs:string"/>
+                <xs:element name="updateDesc" type="xs:string"/>
+                <xs:element name="effectiveTime" type="xs:string"/>
+                <xs:element name="expiryTime" type="xs:string"/>
+                <xs:element name="extensionInfo" type="tns:extenseInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="syncOrderRelationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string"/>
+                <xs:element name="resultDescription" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

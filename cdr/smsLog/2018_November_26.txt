@@ -1,0 +1,10 @@
+12:25:19 -> notify|72|GTECHSDP_SMS_SWITCH|1|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|23232323|Dear User, from 2018-11-01 you have logged 1002 seconds against your mobile number 8801711080468. Your score is 1002
+
+12:32:17 -> notify|72|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|23232323|Dear User, from 2018-11-01 you have logged 1002 seconds against your mobile number 8801711080468. Your score is 1002
+
+12:34:56 -> notify|71|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|23232323|Dear User, from 2018-11-01 you have logged 1002 seconds against your mobile number 8801711080468. Your score is 1002
+
+12:49:53 -> send sms|71|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|232323|Dear User, from 2018-11-01 you have logged 1002 seconds against your mobile number 8801711080468. Your score is 1002
+
+12:55:17 -> send sms|71|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|232323|Dear User, from 2018-11-01 you have logged 1002 seconds against your mobile number 8801711080468. Your score is 1002
+

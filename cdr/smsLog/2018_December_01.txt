@@ -1,0 +1,16 @@
+01:08:49 -> send sms|2|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+
+01:13:30 -> send sms|2|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+
+01:16:35 -> send sms|2|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+
+01:18:12 -> send sms|2|GTECHSDP_SMS_SWITCH|23|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+
+13:21:19 -> send sms|2|GTECHSDP_SMS_SWITCH|1|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+
+13:22:06 -> send sms|2|GTECHSDP_SMS_SWITCH|1|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+
+13:29:39 -> send sms|2|GTECHSDP_SMS_SWITCH|1|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+
+13:31:18 -> send sms|2|GTECHSDP_SMS_SWITCH|1|null|http://116.212.109.35:8080/robisdp|notifySmsDeliveryReceipt|3434343|Dear User, we did not find any record against your mobile number. Please use RadioG Streaming Apps or browse http://www.radiogbd.com to listen any song. Thanks
+

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gtechnologies</groupId>
+    <artifactId>robisdp</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Robi SDP</name>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.7.RELEASE</version>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven-jaxb2-plugin.version>0.13.2</maven-jaxb2-plugin.version>
+    </properties>
+
+    <dependencies>
+        <!-- spring-boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+        </dependency>
+        <!-- Making JDBC Connection -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- JPA Data (We are going to use Repositories, Entities, Hibernate, etc...) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--MYSQL Connector-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.40</version>
+        </dependency>
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+        </dependency>
+
+        <!-- Test Unit -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--  Gson: Java to Json conversion -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--  JSON Object Dependency -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20160212</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- spring-boot-maven-plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.7.RELEASE</version>
+            </plugin>
+            <!-- maven-jaxb2-plugin -->
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <version>${maven-jaxb2-plugin.version}</version>
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>notify_sms</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                            <!--<generatePackage>com.notifysms</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/SmsNotificationManagerService/services/SmsNotificationManager/smsNotification.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>get_received</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemairectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                            <!--<generatePackage>com.getreceived</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/ReceiveSmsService/services/ReceiveSms/getReceived.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>send_sms</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+
+
+                            <!--<generatePackage>com.sendsms</generatePackage>-->
+
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>http://116.212.109.35:9090/SendSmsService/services/SendSms/sendSms.wsdl</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>subScriptionList</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                            <!--<generatePackage>com.subscriptionlist</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/SubScriptionService/services/SubScription/subscriptionList.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>reservAmntCharging</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+
+                            <!--<generatePackage>com.reservamountcharging</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/ReserveAmountChargingService/services/ReserveAmountCharging/reserve.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>volume</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                            <!--<generatePackage>com.volume</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/VolumeChargingService/services/VolumeCharging/chargeVolume.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+
+                    <!--<execution>-->
+                        <!--<id>unsubscribe</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                            <!--<generatePackage>com.unsubscribe</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/SubscribeManageService/services/SubscribeManage/subscription.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+
+                    <!--<execution>-->
+                        <!--<id>subscribe</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                            <!--<generatePackage>com.subscribeproduct</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/SubscribeManageService/services/SubscribeManage/subscription.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>refund_amount</id>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>-->
+                            <!--<schemaIncludes>-->
+                                <!--<include>*.wsdl</include>-->
+                            <!--</schemaIncludes>-->
+                            <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                            <!--<generatePackage>com.refundamount</generatePackage>-->
+                            <!--<schemas>-->
+                                <!--<schema>-->
+                                    <!--<url>-->
+                                        <!--http://116.212.109.35:9090/AmountChargingService/services/AmountCharging/chargeAmount.wsdl-->
+                                    <!--</url>-->
+                                <!--</schema>-->
+                            <!--</schemas>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+
+            </plugin>
+        </plugins>
+        <finalName>robisdp</finalName>
+    </build>
+
+
+</project>

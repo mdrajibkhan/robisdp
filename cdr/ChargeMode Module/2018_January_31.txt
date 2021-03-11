@@ -1,0 +1,4 @@
+14:18:13 -> 1|12|internet User
+14:18:29 -> 0|1111|yahoo
+14:19:28 -> 0|1|yahoo
+14:19:39 -> 1|12|internet User
