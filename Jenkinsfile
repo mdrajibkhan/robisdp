@@ -17,7 +17,7 @@ pipeline {
 		  sh "mv target/*.jar target/robisdp.jar"
 	   }
 	}
-	stage("deploy-dev"){
+	stage ("deploy-dev"){
 	   sshagent(['cf892b75-e31d-4f64-b094-e316a22c804a']) {
  	       sh """
 		  scp -o StrictHostKeyChecking=no target/robisdp.jar root@34.229.142.34:/opt/
