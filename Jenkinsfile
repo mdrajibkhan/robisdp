@@ -14,7 +14,7 @@ pipeline {
 		steps{
 
 		  sh "mvn clean package"
-		  sh "mv target/*.jar target/robisdp.jar"
+		  sh "mv target/*.jar target/robi.jar"
 	
 		}
 	}  
