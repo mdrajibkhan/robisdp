@@ -12,7 +12,7 @@ pipeline {
        stage('Build') {
             steps {
                 echo 'Building'
-                deploy contextPath: '/home/jenkins/', war: '"**/*.war"'
+                deploy contextPath: '/var/lib/jenkins/workspace/Jenkins_Pipeline_Test_Project/', war: '"**/*.war"'
             }
         }
         stage('Deploy') {
