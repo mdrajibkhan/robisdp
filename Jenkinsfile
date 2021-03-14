@@ -23,9 +23,9 @@ pipeline {
 		steps{
 	  	sshagent(['811c1996-30c7-44df-b32a-d26e349240c5'])} {
     		  sh """
-		    scp -o StrictHostKeyChecking=no target/robi.jar ec2-user@34.229.142.34:/opt/tomcat/tomcat9/webapps
-		    ssh ec2-user@34.229.142.34 /opt/tomcat/tomcat9/bin/shutdown.sh
-		    ssh ec2-user@34.229.142.34 /opt/tomcat/tomcat9/bin/startup.sh
+		    scp -o StrictHostKeyChecking=no target/robi.jar root@34.229.142.34:/opt/tomcat/tomcat9/webapps
+		    ssh root@34.229.142.34 /opt/tomcat/tomcat9/bin/shutdown.sh
+		    ssh root@34.229.142.34 /opt/tomcat/tomcat9/bin/startup.sh
 
 		"""
 		}
