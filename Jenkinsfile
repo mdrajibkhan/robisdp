@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment{
+    	path= "/usr/local/src/apache-maven/bin:$PATH"
+    }
     stages {
         stage('Git Checkout') {
             steps {
@@ -12,7 +14,7 @@ pipeline {
 		steps{
 
 		  sh "mvn clean package"
-		}
+	   }
 	}   
     }
 }
