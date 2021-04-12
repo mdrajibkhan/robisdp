@@ -16,6 +16,7 @@ pipeline {
                 sh './mvnw test'
                 // bat '.\\mvnw test'
             }
+	}
 	    
        stage ("Maven Build"){
 		steps{
