@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/mdrajibkhan/robisdp.git'
+                git branch: 'main', credentialsId: 'af2b9693-3995-4539-8fe8-b935ee22a1f4', url: 'https://github.com/mdrajibkhan/robisdp.git'
             }
        
        }
